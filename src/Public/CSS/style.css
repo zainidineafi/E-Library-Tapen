@@ -1,0 +1,197 @@
+/*
+ * Author Alif Triadi Agung Wicaksono
+ */
+
+.body {
+    -fx-min-width: 1280px;
+    -fx-min-height: 720px;
+}
+
+.body-child {
+    -fx-min-width: 1002px;
+    -fx-min-height: 640px;
+}
+
+.bg-dark-blue {
+    -fx-background-color: #343E82;
+}
+
+.bg-light-blue {
+    -fx-background-color: #DEDDE9;
+}
+
+.bg-navy {
+    -fx-background-color: #2B3471;
+}
+
+.bg-white {
+    -fx-background-color: #FBFBFB;
+}
+
+.bg-ligth {
+    -fx-background-color: #EEF2F6;
+}
+
+.bg-grey {
+    -fx-background-color: #9F9F9F;
+}
+
+.bg-blue {
+    -fx-background-color: #4B7BE5;
+}
+
+.bg-yellow {
+    -fx-background-color: #E58A1C;
+}
+
+.bg-red {
+    -fx-background-color: #DC4747;
+}
+
+.transparent {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.login-card {
+    -fx-arc-width: 15px;
+    -fx-arc-height: 15px;
+}
+
+.input-control,
+.input-control .content {
+    -fx-background-radius: 15px;
+    -fx-background-color: #EDEDED;
+}
+
+.input-control-disable,
+.input-control-disable .content {
+    -fx-background-radius: 15px;
+    -fx-background-color: #CECECE;
+}
+
+.input-text-area {
+    -fx-border-color: transparent;
+    -fx-pref-height: 114px;
+}
+
+.navbar {
+    -fx-min-width: 1280px;
+    -fx-min-height: 80px;
+}
+
+.sidebar {
+    -fx-background-color: #343E82;
+    -fx-min-width: 278px;
+    -fx-min-height: 640px;
+}
+
+.sidebar-nav {
+    -fx-background-radius: 0px;
+    -fx-cursor: hand;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-min-width: 278px;
+    -fx-min-height: 48px;
+    -fx-background-color: #343E82;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+}
+
+.sidebar-nav:hover,
+.sidabar-nav:pressed,
+.sidebar-nav-active {
+    -fx-background-radius: 0px;
+    -fx-cursor: hand;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-min-width: 278px;
+    -fx-min-height: 48px;
+    -fx-background-color: #616AA4;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.btn-sm { 
+    -fx-min-width: 55px;
+    -fx-min-height: 55px;
+    -fx-background-radius: 15px;
+    -fx-cursor: hand;
+}
+
+.master-btn {
+    -fx-min-width: 410px;
+    -fx-min-height: 160px;
+    -fx-background-radius: 15px;
+}
+
+.master-btn:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #E6E6E6;
+}
+
+.master-btn .icon-shape {
+    -fx-min-width: 160px;
+    -fx-min-height: 160px;
+    -fx-background-radius: 15px 0 0 15px;
+}
+
+.master-input-col-1 {
+    -fx-min-width: 910px;
+    -fx-min-height: 55px;
+}
+
+.master-input-col-2 {
+    -fx-min-width: 430px;
+    -fx-min-height: 55px;
+}
+
+.search-input {
+    -fx-background-radius: 15px;
+    -fx-background-color: #FFF;
+    -fx-min-width: 356px;
+    -fx-min-height: 45px;
+    -fx-font-size: 16px;
+}
+
+.btn {
+    -fx-min-width: 155px;
+    -fx-min-height: 45px;
+    -fx-background-radius: 10px;
+    -fx-alignment: BASELINE_LEFT;
+    -fx-cursor: HAND;
+}
+
+.icon-box {
+    -fx-background-radius: 3px;
+    -fx-min-width: 33px;
+    -fx-min-height: 33px;
+}
+
+.card-header {
+    -fx-min-width: 906px;
+    -fx-min-height: 43px;
+    -fx-background-radius: 15px 15px 0 0;
+}
+
+.text-dark-blue {
+    -fx-text-fill: #343E82;
+    -fx-fill: #343E82;
+}
+
+.text-navy {
+    -fx-text-fill: #2B3471;
+    -fx-fill: #2B3471;
+}
+
+.text-grey {
+    -fx-text-fill: #787878;
+    -fx-fill: #787878;
+}
+
+.text-light {
+    -fx-text-fill: #DEDDE9;
+    -fx-fill: #DEDDE9;
+}
+
+.font-bold {
+    -fx-font-weight: bold;
+}

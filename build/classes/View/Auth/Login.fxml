@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../Public/CSS/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <ImageView fitHeight="419.0" fitWidth="446.0" layoutX="96.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Public/Images/login-1.png" />
+         </image>
+      </ImageView>
+      <Rectangle fill="WHITE" height="625.0" layoutX="648.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" styleClass="login-card" width="586.0" />
+      <Text fill="WHITE" layoutX="137.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayo Ubah Kualitas Hidup Anda">
+         <font>
+            <Font name="Segoe UI Black" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="110.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perbanyak membaca akan membuat hidupmu lebih teratur." textAlignment="CENTER" wrappingWidth="418.40625">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="usernameInput" layoutX="682.0" layoutY="397.0" prefHeight="55.0" prefWidth="519.0" styleClass="input-control">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding></TextField>
+      <Text layoutX="682.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="682.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="66.61376953125" />
+      <Button fx:id="login" layoutX="682.0" layoutY="573.0" maxHeight="1.7976931348623157E308" minHeight="55.0" minWidth="519.0" mnemonicParsing="false" onAction="#loginAction" style="-fx-background-color: #2B3471; -fx-background-radius: 15px;" text="Masuk" textFill="WHITE">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="135.0" fitWidth="331.0" layoutX="777.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Public/Images/Logo%20Black%20-%20Login.png" />
+         </image>
+      </ImageView>
+      <Text fill="#2b3471" layoutX="849.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat Datang">
+         <font>
+            <Font name="Segoe UI Black" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="777.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ayo masuk untuk menggunakan fiturnya." textAlignment="CENTER" wrappingWidth="331.40625">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Text>
+      <PasswordField fx:id="passwordInput" layoutX="683.0" layoutY="493.0" prefHeight="55.0" prefWidth="519.0" styleClass="input-control">
+         <padding>
+            <Insets left="10.0" />
+         </padding></PasswordField>
+      <Label fx:id="info" layoutX="682.0" layoutY="326.0" prefHeight="24.0" prefWidth="519.0" />
+   </children>
+   <styleClass>
+      <String fx:value="body" />
+      <String fx:value="bg-navy" />
+   </styleClass>
+</AnchorPane>

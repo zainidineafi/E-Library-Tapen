@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="body" stylesheets="@../../Public/CSS/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="search" layoutX="48.0" layoutY="20.0" onKeyReleased="#searchMethod" promptText="Cari" styleClass="search-input" />
+                  <Button fx:id="btnTambah" graphicTextGap="19.0" layoutX="449.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnTambahHandle" text="Tambah">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="bg-dark-blue" />
+                        <String fx:value="text-light" />
+                     </styleClass>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></Button>
+                  <Button fx:id="btnEdit" graphicTextGap="19.0" layoutX="624.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnEditHandle" text="Edit">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="bg-yellow" />
+                        <String fx:value="text-light" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnHapus" graphicTextGap="19.0" layoutX="799.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnHapusHandle" text="Hapus">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/trash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="bg-red" />
+                        <String fx:value="text-light" />
+                     </styleClass>
+                  </Button>
+                  <Pane layoutX="48.0" layoutY="85.0">
+                     <children>
+                        <TableView fx:id="tablePetugas" layoutY="40.0" style="-fx-min-width: 906; -fx-min-height: 445;">
+                          <columns>
+                            <TableColumn fx:id="idCol" editable="false" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="nameCol" editable="false" prefWidth="75.0" text="Nama" />
+                              <TableColumn fx:id="usernameCol" editable="false" prefWidth="114.0" text="Username" />
+                              <TableColumn fx:id="phoneCol" editable="false" prefWidth="179.0" sortable="false" text="Nomor" />
+                              <TableColumn fx:id="genderCol" editable="false" prefWidth="70.0" text="Gender" />
+                              <TableColumn fx:id="addressCol" editable="false" prefWidth="208.0" text="Alamat" />
+                              <TableColumn fx:id="createdAtCol" editable="false" prefWidth="184.0" text="Tanggal Bergabung" />
+                          </columns>
+                        </TableView>
+                        <Pane>
+                           <styleClass>
+                              <String fx:value="card-header" />
+                              <String fx:value="bg-dark-blue" />
+                           </styleClass>
+                           <children>
+                              <Text layoutX="30.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-light" text="Petugas">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <AnchorPane fx:id="formPage" prefHeight="640.0" prefWidth="1002.0">
+                     <styleClass>
+                        <String fx:value="body-child" />
+                        <String fx:value="bg-ligth" />
+                     </styleClass>
+                     <children>
+                        <Button fx:id="btnKembaliFormPage" graphicTextGap="19.0" layoutX="30.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnKembaliFormPageHandle" text="Kembali">
+                           <styleClass>
+                              <String fx:value="btn" />
+                              <String fx:value="bg-yellow" />
+                              <String fx:value="text-light" />
+                           </styleClass>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Public/Images/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Button>
+                        <ScrollPane layoutY="85.0" prefHeight="577.0" prefWidth="1002.0" style="-fx-min-height: 575; -fx-min-width: 1002;" styleClass="transparent">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="620.0" prefWidth="1002.0" style="-fx-min-width: 1002; -fx-min-height: 575;" styleClass="bg-ligth">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="4.0" text="ID" />
+                                    <TextField fx:id="idInput" editable="false" layoutX="30.0" layoutY="35.0">
+                                       <styleClass>
+                                          <String fx:value="input-control-disable" />
+                                          <String fx:value="master-input-col-1" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </TextField>
+                                    <Label layoutX="30.0" layoutY="100.0" text="Nama" />
+                                    <TextField fx:id="nameInput" layoutX="30.0" layoutY="131.0">
+                                       <styleClass>
+                                          <String fx:value="input-control" />
+                                          <String fx:value="master-input-col-2" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </TextField>
+                                    <Label layoutX="510.0" layoutY="100.0" text="Gender" />
+                                    <Label layoutX="30.0" layoutY="196.0" text=" Username" />
+                                    <TextField fx:id="usernameInput" layoutX="30.0" layoutY="227.0">
+                                       <styleClass>
+                                          <String fx:value="input-control" />
+                                          <String fx:value="master-input-col-2" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </TextField>
+                                    <Label layoutX="510.0" layoutY="196.0" text="Password" />
+                                    <TextField fx:id="passwordInput" layoutX="510.0" layoutY="227.0">
+                                       <styleClass>
+                                          <String fx:value="input-control" />
+                                          <String fx:value="master-input-col-2" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </TextField>
+                                    <Label layoutX="30.0" layoutY="291.0" text="Nomor" />
+                                    <TextField fx:id="nomorInput" layoutX="30.0" layoutY="322.0">
+                                       <styleClass>
+                                          <String fx:value="input-control" />
+                                          <String fx:value="master-input-col-1" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </TextField>
+                                    <Label layoutX="30.0" layoutY="387.0" text="Alamat" />
+                                    <TextArea fx:id="addressInput" layoutX="30.0" layoutY="416.0">
+                                       <styleClass>
+                                          <String fx:value="input-control" />
+                                          <String fx:value="master-input-col-1" />
+                                          <String fx:value="input-text-area" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextArea>
+                                    <Button fx:id="btnSubmit" graphicTextGap="19.0" layoutX="30.0" layoutY="550.0" mnemonicParsing="false" onAction="#btnSubmitHandle" text="Tambah">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Public/Images/add.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="bg-dark-blue" />
+                                          <String fx:value="text-light" />
+                                       </styleClass>
+                                    </Button>
+                                    <ComboBox fx:id="genderInput" layoutX="510.0" layoutY="131.0" prefWidth="150.0" promptText="Pilih">
+                                       <styleClass>
+                                          <String fx:value="input-control" />
+                                          <String fx:value="master-input-col-2" />
+                                       </styleClass>
+                                    </ComboBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </center>
+         <left>
+            <VBox styleClass="sidebar" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-light" text="Navigasi">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="btnDashboard" alignment="TOP_CENTER" graphicTextGap="19.0" mnemonicParsing="false" onAction="#btnDashboardHandle" styleClass="sidebar-nav" text="Dashboard">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnTransaksi" alignment="TOP_CENTER" graphicTextGap="19.0" mnemonicParsing="false" onAction="#btnTransaksiHandle" styleClass="sidebar-nav" text="Transaksi">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnMaster" alignment="TOP_CENTER" graphicTextGap="19.0" mnemonicParsing="false" onAction="#btnMasterHandle" styleClass="sidebar-nav-active" text="Master">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnLaporan" alignment="TOP_CENTER" graphicTextGap="19.0" mnemonicParsing="false" onAction="#btnLaporanHandle" styleClass="sidebar-nav" text="Laporan">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/documents.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnLogout" alignment="TOP_CENTER" graphicTextGap="19.0" layoutX="10.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnLogoutHandle" styleClass="sidebar-nav" text="Keluar">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <styleClass>
+            <String fx:value="body" />
+            <String fx:value="bg-ligth" />
+         </styleClass>
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Public/Images/Logo%20White%20-%20Login.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="75.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <AnchorPane styleClass="navbar">
+                     <children>
+                        <Label fx:id="nameBox" layoutX="889.0" layoutY="30.0" text="Admin">
+                           <styleClass>
+                              <String fx:value="text-light" />
+                              <String fx:value="font-bold" />
+                           </styleClass>
+                        </Label>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="829.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/default.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <styleClass>
+                  <String fx:value="navbar" />
+                  <String fx:value="bg-navy" />
+               </styleClass>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

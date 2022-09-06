@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="body" stylesheets="@../../Public/CSS/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TransactionController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" layoutY="-3.0" prefHeight="646.0" prefWidth="1002.0" style="-fx-min-width: 1002; -fx-min-height: 646;" styleClass="transparent">
+                     <content>
+                        <AnchorPane prefHeight="790.0" prefWidth="1002.0" style="-fx-min-width: 1002; -fx-min-height: 646;" styleClass="bg-ligth">
+                           <children>
+                              <Pane layoutX="54.0" layoutY="24.0" onMouseClicked="#btnPeminjamanHandle">
+                                 <children>
+                                    <Pane>
+                                       <children>
+                                          <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="32.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Public/Images/petugas.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="icon-shape" />
+                                          <String fx:value="bg-dark-blue" />
+                                       </styleClass>
+                                    </Pane>
+                                    <Text layoutX="190.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-dark-blue" text="Peminjaman">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="191.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-grey" text="Kelola data peminjaman">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="master-btn" />
+                                    <String fx:value="bg-white" />
+                                 </styleClass>
+                              </Pane>
+                              <Pane layoutX="518.0" layoutY="20.0" onMouseClicked="#btnPengembalianHandle">
+                                 <children>
+                                    <Pane>
+                                       <children>
+                                          <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="32.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../Public/Images/petugas.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="icon-shape" />
+                                          <String fx:value="bg-dark-blue" />
+                                       </styleClass>
+                                    </Pane>
+                                    <Text layoutX="190.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-dark-blue" text="Pengembalian">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="191.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-grey" text="Kelola data pengembalian">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="master-btn" />
+                                    <String fx:value="bg-white" />
+                                 </styleClass>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <VBox styleClass="sidebar" BorderPane.alignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-light" text="Navigasi">
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="btnDashboard" alignment="TOP_CENTER" graphicTextGap="19.0" mnemonicParsing="false" onAction="#btnDashboardHandle" styleClass="sidebar-nav" text="Dashboard">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnTransaksi" alignment="TOP_CENTER" graphicTextGap="19.0" mnemonicParsing="false" onAction="#btnTransaksiHandle" styleClass="sidebar-nav-active" text="Transaksi">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnMaster" alignment="TOP_CENTER" graphicTextGap="19.0" mnemonicParsing="false" onAction="#btnMasterHandle" styleClass="sidebar-nav" text="Master">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnLaporan" alignment="TOP_CENTER" graphicTextGap="19.0" mnemonicParsing="false" onAction="#btnLaporanHandle" styleClass="sidebar-nav" text="Laporan">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/documents.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnLogout" alignment="TOP_CENTER" graphicTextGap="19.0" layoutX="10.0" layoutY="157.0" mnemonicParsing="false" onAction="#btnLogoutHandle" styleClass="sidebar-nav" text="Keluar">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <styleClass>
+            <String fx:value="body" />
+            <String fx:value="bg-ligth" />
+         </styleClass>
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Public/Images/Logo%20White%20-%20Login.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="75.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <AnchorPane styleClass="navbar">
+                     <children>
+                        <Label fx:id="nameBox" layoutX="889.0" layoutY="30.0" text="Admin">
+                           <styleClass>
+                              <String fx:value="text-light" />
+                              <String fx:value="font-bold" />
+                           </styleClass>
+                        </Label>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="829.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Public/Images/default.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <styleClass>
+                  <String fx:value="navbar" />
+                  <String fx:value="bg-navy" />
+               </styleClass>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
